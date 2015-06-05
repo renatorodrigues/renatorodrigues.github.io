@@ -116,7 +116,7 @@ $photo-size: 200px;
 $photo-border: 6px;
 
 .photo {
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 2rem;
   width: $photo-size + $photo-border;
   height: $photo-size + $photo-border;
   border-radius: ($photo-size + $photo-border) / 2;
