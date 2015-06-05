@@ -1,2 +1,255 @@
 @import 'normalize';
+@import 'skeleton';
 @import 'global';
+
+$grey: #eee;
+
+$header-height: 80px;
+
+.main-header {
+  background-color: #fff;
+  // border-bottom: 1px solid $grey;
+
+  .main-nav,
+  .secondary-nav {
+    height: $header-height;
+    line-height: $header-height;
+  }
+
+  .main-nav {
+    float: left;
+
+    .main-menu-list {
+      list-style: none;
+      margin-bottom: 0;
+      float: left;
+
+      .main-menu-item {
+        float: left;
+        margin-bottom: 0;
+        position: relative;
+
+        .main-menu-link {
+          color: #222;
+          font-weight: 600;
+          letter-spacing: 0.2rem;
+          margin-right: 30px;
+          font-size: 1.1rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .secondary-nav {
+    float: right;
+
+    .secondary-menu-list {
+      list-style: none;
+      margin-bottom: 0;
+      float: right;
+
+      .secondary-menu-item {
+        float: right;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.hero {
+  text-align: center;
+  background: #333;
+  color: #fff;
+
+  .container {
+    padding: 150px 0;
+  }
+
+  .hero-headline {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    margin: {
+      top: 0;
+      left: auto;
+      right: auto;
+      bottom: 1.5rem;
+    }
+    padding-bottom: 1rem;
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+  }
+
+  .hero-role {
+    font-family: "adobe-garamond-pro";
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    margin: 0;
+  }
+}
+
+.content {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .content-header {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    padding: {
+      left: 2rem;
+      right: 2rem;
+      bottom: 0.5rem;
+    }
+    border-bottom: 1px solid #333;
+  }
+}
+
+$photo-size: 200px;
+$photo-border: 6px;
+
+.photo {
+  margin: 0 auto 2.5rem;
+  width: $photo-size + $photo-border;
+  height: $photo-size + $photo-border;
+  border-radius: ($photo-size + $photo-border) / 2;
+  border: $photo-border solid $grey;
+  background: {
+    image: url(../img/me.jpg);
+    size: $photo-size $photo-size;
+  }
+}
+
+.name {
+  margin-bottom: 0;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.location {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.contacts-list {
+  list-style: none;
+
+  .contacts-item {
+
+    .contact-type {
+      margin-bottom: 0;
+    }
+
+    .contact-value {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+
+  .contacts-list {
+
+    .contacts-item {
+
+      &:first-child {
+        text-align: right;
+      }
+
+      &:last-child {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.footer {
+  background: $grey;
+  color: #aaa;
+  text-align: center;
+  padding: 5rem 0;
+
+  .footer-menu-list {
+    list-style: none;
+    text-align: center;
+
+    .footer-menu-item {
+      display: inline-block;
+      margin: 0 2rem;
+    }
+
+    .footer-menu-link {
+      color: #222;
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+      font-size: 11px;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;  
+    }
+  }
+
+  .footer-social-list {
+    list-style: none;
+    text-align: center;
+    height: 1.6rem;
+
+    .footer-social-item {
+      display: inline-block;
+      margin: 0 10px;
+
+      .footer-social-link {
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        text-decoration: none;
+
+        .icon {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.italic {
+  font-family: "adobe-garamond-pro";
+  font-style: italic;
+}
+
+.button {
+
+  &.button-outline {
+    color: #2077b2;
+    background-color: #fff;
+    border-color: #2077b2;
+
+  }
+}
