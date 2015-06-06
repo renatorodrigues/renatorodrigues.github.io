@@ -276,6 +276,40 @@ $photo-border: 6px;
   }
 }
 
+.languages-list {
+  list-style: none;
+
+  .languages-item {
+    text-align: center;
+
+    .language {
+      margin-bottom: 0;
+    }
+
+    .level {
+      @extend .italic;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+
+  .languages-list {
+
+    .languages-item {
+
+      &:first-child {
+        text-align: right;
+      }
+
+      &:last-child {
+        text-align: left;
+      }
+    }
+  }
+}
+
 .icon {
   display: inline-block;
   width: 1em;
