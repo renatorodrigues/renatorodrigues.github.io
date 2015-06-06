@@ -172,6 +172,115 @@ $photo-border: 6px;
   }
 }
 
+.skills-list {
+  list-style: none;
+  font-size: 1.5rem;
+  margin: 0;
+
+  li {
+    margin: 0;
+  }
+
+  .skills-item {
+
+    .skills-category {
+      border-bottom: 1px solid $grey;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .skills-list {
+      margin-bottom: 1rem;
+
+      li {
+        @extend .clearfix;
+
+        &:hover {
+          background-color: $grey;
+        }
+
+        .skill-title {
+          @extend .u-pull-left;
+        }
+
+        .skill-rating {
+          @extend .u-pull-right;
+
+          // background-color: red;
+
+          .icon-star {
+            color: #b0b0b0;
+
+            &.filled {
+              color: #2077b2;
+            }
+          }
+
+          &.stars-5 {
+            .icon-star {
+              @extend .icon-star.filled;
+            }
+          }
+
+          &.stars-4 {
+            .icon-star:nth-child(-n+4) {
+              @extend .icon-star.filled;
+            }
+          }
+
+          &.stars-3 {
+            .icon-star:nth-child(-n+3) {
+              @extend .icon-star.filled;
+            }
+          }
+
+          &.stars-2 {
+            .icon-star:nth-child(-n+2) {
+              @extend .icon-star.filled;
+            }
+          }
+
+          &.icon-stars-1 {
+            .star:first-child {
+              @extend .icon-star.filled;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin column-width($width) {
+  -webkit-column-width: $width;
+     -moz-column-width: $width;
+          column-width: $width;
+}
+
+@mixin column-gap($gap) {
+  -webkit-column-gap: $gap;
+     -moz-column-gap: $gap;
+          column-gap: $gap;
+}
+
+@mixin column-break-inside($value) {
+  -webkit-column-break-inside: $value;
+     -moz-column-break-inside: $value;
+          column-break-inside: $value;
+}
+
+.col {
+  @include column-width(290px);
+  @include column-gap(20px);
+}
+
+.col > li {
+  @include column-break-inside(avoid);
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
