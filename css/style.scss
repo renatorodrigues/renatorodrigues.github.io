@@ -150,7 +150,7 @@ $photo-border: 6px;
     margin-bottom: 2.5rem;
 
     .information {
-      text-align: center;
+      text-align: left;
 
       .role,
       .degree,
@@ -220,32 +220,26 @@ $photo-border: 6px;
   }
 }
 
-@media (#{$bp-larger-than-phablet}) {
-
-    .resume-list {
-      .resume-item {
-        .information {
-
-          .details {
-            
-          }
-
-          .link {
-            margin-bottom: 0;
-          }
-
-        }
-
-        
-      }
-    }
-}
-
 @media (#{$bp-larger-than-tablet}) {
+
   .experience-list {
     .experience-item {
+
+      .information,
+      .description {
+        width: 48%;
+      }
+
       .information {
         text-align: right;
+
+        .link {
+          margin-bottom: 0;
+        }
+      }
+
+      .description {
+        margin-left: 4%;
       }
     }
   }
