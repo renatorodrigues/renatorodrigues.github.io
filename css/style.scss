@@ -33,7 +33,7 @@ $header-height: 80px;
           color: #222;
           font-weight: 600;
           letter-spacing: 0.2rem;
-          margin-right: 30px;
+          margin-right: 2rem;
           font-size: 1.1rem;
           text-decoration: none;
           text-transform: uppercase;
@@ -54,6 +54,34 @@ $header-height: 80px;
       .secondary-menu-item {
         float: right;
         margin-bottom: 0;
+
+        .button {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (#{$bp-larger-than-phablet}) {
+  .main-header {
+    .main-nav {
+      .main-menu-list {
+        .main-menu-item {
+          .main-menu-link {
+            margin-right: 3rem;
+          }
+        }
+      }
+    }
+
+    .secondary-nav {
+      .secondary-menu-list {
+        .secondary-menu-item {
+          .button {
+            padding: 0 3rem;
+          }
+        }
       }
     }
   }
@@ -220,6 +248,16 @@ $photo-border: 6px;
   }
 }
 
+@media (#{$bp-larger-than-phablet}) {
+  .education-list {
+    .education-item {
+      .information {
+        text-align: center;
+      }
+    }
+  }
+}
+
 @media (#{$bp-larger-than-tablet}) {
 
   .experience-list {
@@ -244,6 +282,13 @@ $photo-border: 6px;
     }
   }
 
+  .education-list {
+    .education-item {
+      .information {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .skills-list {
