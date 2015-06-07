@@ -6,9 +6,10 @@ $grey: #eee;
 
 $header-height: 80px;
 
+$italic-font-family: "Adobe Garamond Pro", Constantia, "Times New Roman", Times, serif;
+
 .main-header {
   background-color: #fff;
-  // border-bottom: 1px solid $grey;
 
   .main-nav,
   .secondary-nav {
@@ -113,7 +114,7 @@ $header-height: 80px;
   }
 
   .hero-role {
-    font-family: "adobe-garamond-pro";
+    font-family: $italic-font-family;
     font-style: italic;
     letter-spacing: 0.1rem;
     margin: 0;
@@ -174,7 +175,6 @@ only screen and (                min-resolution: 2dppx) {
     margin-bottom: 0;
     letter-spacing: 0.2rem;
     font-size: 2rem;
-    font-weight: 300;
   }
 
   .location {
@@ -532,7 +532,6 @@ only screen and (                min-resolution: 2dppx) {
   .copyright {
     margin: 0;
     text-align: center;
-    font-weight: 300;
     font-size: 1.2rem;
   }
 }
@@ -542,7 +541,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .italic {
-  font-family: "adobe-garamond-pro";
+  font-family: $italic-font-family;
   font-style: italic;
 }
 
