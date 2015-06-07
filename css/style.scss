@@ -127,49 +127,129 @@ $photo-border: 6px;
   }
 }
 
-.name {
-  margin-bottom: 0;
-  letter-spacing: 0.2rem;
-  font-size: 2rem;
-  font-weight: 300;
+.about {
+
+  .name {
+    margin-bottom: 0;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .location {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
 }
 
-.location {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.contacts-list {
+.resume-list {
   list-style: none;
 
-  .contacts-item {
+  .resume-item {
+    margin-bottom: 2.5rem;
 
-    .contact-type {
-      margin-bottom: 0;
+    .information {
+      text-align: center;
+
+      .role,
+      .degree,
+      .school,
+      .company,
+      .details {
+        margin-bottom: 0;
+      }
+
+      .role,
+      .degree {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .company,
+      .school {
+        font-size: 1.4rem;
+      }
+
+      .icon {
+        margin-bottom: -2px;
+      }
+
+      .details {
+        font-size: 1.4rem;
+
+        .dates {
+          color: #333;
+        }
+
+        .location::before,
+        .link::before {
+          content: "|";
+          color: #bcbcbc;
+          padding: 0 0.5rem;
+        }
+
+        .link::before {
+          display: none;
+        }
+      }
+
+      .link {
+        font-size: 1.4rem;
+      }
     }
 
-    .contact-value {
-      margin-bottom: 0;
+    .description {
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .toolbox {
+
+        span {
+          background: $grey;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 1.2rem;
+          padding: 0.3rem 0.5rem;
+          white-space: nowrap;
+        }
+      }
     }
   }
 }
 
-@media (min-width: 550px) {
+@media (#{$bp-larger-than-phablet}) {
 
-  .contacts-list {
+    .resume-list {
+      .resume-item {
+        .information {
 
-    .contacts-item {
+          .details {
+            
+          }
 
-      &:first-child {
-        text-align: right;
+          .link {
+            margin-bottom: 0;
+          }
+
+        }
+
+        
       }
+    }
+}
 
-      &:last-child {
-        text-align: left;
+@media (#{$bp-larger-than-tablet}) {
+  .experience-list {
+    .experience-item {
+      .information {
+        text-align: right;
       }
     }
   }
+
 }
 
 .skills-list {
@@ -298,6 +378,38 @@ $photo-border: 6px;
   .languages-list {
 
     .languages-item {
+
+      &:first-child {
+        text-align: right;
+      }
+
+      &:last-child {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.contacts-list {
+  list-style: none;
+
+  .contacts-item {
+
+    .contact-type {
+      margin-bottom: 0;
+    }
+
+    .contact-value {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+
+  .contacts-list {
+
+    .contacts-item {
 
       &:first-child {
         text-align: right;
