@@ -3,7 +3,7 @@ requirejs.config({
   paths: {
     app: '../app',
 
-    jquery: '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min'
+    jquery: '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min'
   }
 });
 
