@@ -33,9 +33,9 @@ $italic-font-family: "Adobe Garamond Pro", Constantia, "Times New Roman", Times,
         .main-menu-link {
           color: #222;
           font-weight: 600;
-          letter-spacing: 0.2rem;
+          letter-spacing: 0.1em;
           margin-right: 2rem;
-          font-size: 1.1rem;
+          font-size: 0.8em;
           text-decoration: none;
           text-transform: uppercase;
           display: inline-block;
@@ -127,7 +127,7 @@ $italic-font-family: "Adobe Garamond Pro", Constantia, "Times New Roman", Times,
   padding-bottom: 100px;
 
   .content-header {
-    font-size: 1.5rem;
+    font-size: 1.25em;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-weight: 600;
@@ -174,14 +174,17 @@ only screen and (                min-resolution: 2dppx) {
 
   .name {
     margin-bottom: 0;
-    letter-spacing: 0.2rem;
-    font-size: 2rem;
+    letter-spacing: 0.1em;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 
   .location {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 0.8em;
+    color: rgba(55, 53, 47, 0.6);
   }
 }
 

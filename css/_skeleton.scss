@@ -42,7 +42,7 @@ $primary-color: #33c3f0 !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
 $link-color: #1eaedb !default;
-$font-color: #222 !default;
+$font-color: #37352f !default;
 
 // Typography
 $font-family: -apple-system, BlinkMacSystemFont, "HelveticaNeue", "Helvetica Neue", Helvetica, sans-serif !default;
@@ -175,9 +175,8 @@ html {
 }
 
 body {
-  font-size: 1.5em; // currently ems cause chrome bug misinterpreting rems on body element
-  line-height: 1.6;
-  font-weight: 400;
+  font-size: 1.6em; // currently ems cause chrome bug misinterpreting rems on body element
+  line-height: 1.5;
   font-family: $font-family;
   color: $font-color;
 }
